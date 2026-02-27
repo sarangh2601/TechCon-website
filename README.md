@@ -1,1 +1,1 @@
-https://tech-con-website.vercel.app/
+https://tech-con-website-ppdc.vercel.app/
