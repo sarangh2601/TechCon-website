@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>CLONE PAGE</title>
+    <link rel="icon" type="image/png" href="./techcon-logo.png">
+    <title>TechCom - Empowering the IT Solutions</title>
 </head>
 
 <body>
@@ -14,19 +15,24 @@
     <!-- Nevigation Bar -->
     <nav>
         <div class="logo">🖧 TechCon</div>
-        <div class="right-nav">
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+
+        <div class="right-nav" id="right-nav">
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about-us">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#industries">Industries</a></li>
+                <li><a href="#process">Workflow</a></li>
             </ul>
-            <button class="nav-btn">Contact Us</button>
+            <button class="nav-btn" onclick="goToPage()">Contact Us</button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <div class="main">
+    <div class="main" id="home">
         <div class="contents">
             <div class="heading">
                 <p class="top-head">#The leading StartUp Events !</p>
@@ -54,14 +60,14 @@
         </div>
     </div>
 
-    <section class="about-us">
+    <section class="about-us" id="about-us">
         <div class="about-image">
             <img src="./About-us.jpg" alt="About Us Image">
         </div>
         <div class="about-content">
             <div class="about-content-top">
                 <p class="about-top-head">#About TechCon</p>
-                <h2>Connecting Minds. Creating the Future.</h2>
+                <h2>Connecting Minds, Creating the Future.</h2>
                 <p>TechCon is a leading IT software company delivering innovative technology solutions. We specialize in
                     custom software development, web applications, mobile apps, and enterprise systems that drive
                     business growth</p>
@@ -91,7 +97,7 @@
     </section>
 
     <!-- Services Section -->
-    <section class="services">
+    <section class="services" id="services">
         <div class="service-right">
             <div class="service-right-card">
                 <i class="fa-solid fa-code"></i>
@@ -131,7 +137,7 @@
     </section>
 
     <!-- Industries we serve  -->
-    <section class="industries">
+    <section class="industries" id="industries">
         <div class="industries-top">
             <p class="industries-top-head">#Industries We Serve</p>
             <h2>Driving Innovation Across<br>Diverse Industries</h2>
@@ -204,7 +210,7 @@
 
 
     <!-- process We Follow -->
-    <section class="process">
+    <section class="process" id="process">
         <div class="industries-top">
             <p class="industries-top-head">#Process We Follow</p>
             <h2>strategic, agile, and result-driven process<br>designed for success.</h2>
@@ -246,7 +252,7 @@
     </section>
 
     <!-- Contact Us  -->
-    <section class="contact-us">
+    <section class="contact-us" id="contact-us">
         <div class="contact-us-box">
             <div class="contact-us-left">
                 <p class="contact-top-head">#Conntact Us</p>
@@ -282,17 +288,17 @@
     </section>
 
     <!-- call to action -->
-     <section class="call-to-action">
+    <section class="call-to-action">
         <div class="call-to-action-container">
             <div class="call-to-action-left">
-                <h3>Ready to Transform Your<br>Business?</h3>
+                <h3>Ready to Transform Your Business?</h3>
                 <p>Let’s build secure, scalable, and innovative digital solutions tailored to your needs.</p>
             </div>
             <div class="call-to-action-right">
                 <button>Let's Start</button>
             </div>
         </div>
-     </section>
+    </section>
 
     <footer class="footer">
         <div class="footer-container">
@@ -315,10 +321,12 @@
                 <div class="footer-content-2">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about-us">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#industries">industries</a></li>
+                        <li><a href="#process">Workflow</a></li>
+                        <li><a href="#contact-us">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -327,7 +335,7 @@
                     <h3>Contact Us</h3>
                     <div class="locatn">
                         <i class="fa-solid fa-location-dot"></i>
-                        <p class=""> Subhash Nagar, Gayatri Nagar,<br>IT park,
+                        <p class="">Subhash Nagar, Gayatri Nagar, IT park,
                             Nagpur - 440022
                         </p>
                     </div>
@@ -339,6 +347,18 @@
         <hr class="horiLine">
         <div class="copyright">© 2024 TechCon. Design By Sarang Harode. All rights reserved.</div>
     </footer>
+    <script>
+        toggle = document.querySelector(".menu-toggle");
+        const nav = document.querySelector(".right-nav");
+
+        toggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+
+        function goToPage() {
+            window.location.href = "#contact-us";
+        }
+    </script>
 </body>
 
 </html>
